@@ -12,24 +12,17 @@ class Book
         Console.WriteLine();
     }
 
-    static void Main(string[] args) 
+    public Book(string bookTitle, string bookAuthor, string bookISBN)
     {
-        // Instance of the Book class named 'book'
-        Book book = new Book();
+        title = bookTitle;
+        author = bookAuthor;
+        isbn = bookISBN;
+    }
+    static void Main(string[] args)
+    {
+        // Create a new book object
+        Book book = new Book("C# for beginners", "Bill Gates", "1234567");
 
-        // This information is for one book in our library
-        book.title = "C# for beginners";
-        book.author = "BillGates";
-        book.isbn = "12345678";
-
-        // Instance of the Book class named 'book1'
-        Book book1 = new Book();
-        book1.title = "C# Methods and classes";
-        book1.author = "Microsoft";
-        book1.isbn = "55667778";
-
-        // Output book information to the console
         book.DisplayInfo();
-        book1.DisplayInfo();
     }
 }
